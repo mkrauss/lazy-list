@@ -17,4 +17,7 @@
                                      (:file "materialize")
                                      (:file "print-object")
                                      (:file "take")
-                                     (:file "take-while")))))
+                                     (:file "take-while")))
+               (:module "comprehension" :serial t
+                        :components ((:file "package")
+                                     (:file "series")))))
