@@ -20,4 +20,5 @@
                                      (:file "take-while")))
                (:module "comprehension" :serial t
                         :components ((:file "package")
-                                     (:file "series")))))
+                                     (:file "series")
+                                     (:file "lmapcar")))))

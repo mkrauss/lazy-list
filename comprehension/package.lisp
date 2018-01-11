@@ -4,4 +4,5 @@
   (:nicknames :lazy-list-series :lazy-series)
   (:use :common-lisp :lazy-list)
   (:export series
-           series-to))
+           series-to
+           lmapcar))
