@@ -10,7 +10,6 @@
   :serial t
   :components ((:module "core" :serial t
                         :components ((:file "package")
-                                     (:file "sloth")
                                      (:file "lcons")
                                      (:file "lcar")
                                      (:file "lcdr")

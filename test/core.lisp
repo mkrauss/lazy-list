@@ -5,9 +5,6 @@
 (define-test core
   :serial nil
   
-  (define-test sloth
-    (of-type sloth (make-instance 'sloth)))
-
   (define-test lcons
     :serial nil
 

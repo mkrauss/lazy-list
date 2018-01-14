@@ -1,6 +1,6 @@
 (in-package :com.matthewkrauss.lazy-list/core)
 
-(defclass lcons (sloth)
+(defclass lcons ()
   ((value :initarg :value)
    (fn :initarg :fn))
   (:documentation "Lazy evaluating list-forming cons cell. LCAR

@@ -3,9 +3,8 @@
 (defpackage :com.matthewkrauss.lazy-list/core
   (:nicknames :lazy-list/core)
   (:use :common-lisp)
-  (:export sloth
+  (:export lcons
            lcons*
-           lcons
            lcar
            lcdr
            take
