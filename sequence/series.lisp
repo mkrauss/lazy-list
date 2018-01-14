@@ -1,4 +1,4 @@
-(in-package :com.matthewkrauss.lazy-list-series)
+(in-package :com.matthewkrauss.lazy-list/sequence)
 
 (defun series (initial increment)
   "Return a lazy series from INITIAL, adding INCREMENT, indefinitely."

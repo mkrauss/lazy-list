@@ -1,6 +1,6 @@
-(in-package :com.matthewkrauss.lazy-list-test)
+(in-package :com.matthewkrauss.lazy-list/test)
 
-(define-test comprehension
+(define-test sequence
   :serial nil
 
   (define-test series
@@ -14,4 +14,7 @@
         (materialize (lmapcar #'exp (series-to 4 1 1))))
     (is equal '(7 5 13 8 19)
         (materialize (take 5 (lmapcar (lambda (x) (if (oddp x) x (/ x 2)))
-                                      (series 7 3)))))))
+                                      (series 7 3))))))
+  (define-test lfilter
+    (is equal '(2 4 6 8)
+        (materialize (take 4 (lfilter #'evenp (series 1 1)))))))

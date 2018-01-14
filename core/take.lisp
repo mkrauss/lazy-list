@@ -1,4 +1,4 @@
-(in-package :com.matthewkrauss.lazy-list)
+(in-package :com.matthewkrauss.lazy-list/core)
 
 (defgeneric take (number sequence))
 

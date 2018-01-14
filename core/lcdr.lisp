@@ -1,4 +1,4 @@
-(in-package :com.matthewkrauss.lazy-list)
+(in-package :com.matthewkrauss.lazy-list/core)
 
 (defgeneric lcdr (lazy-cons)
   (:documentation "The cdr of a lazy cons cell."))

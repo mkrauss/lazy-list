@@ -11,4 +11,4 @@
   :components ((:module "test" :serial t
                         :components ((:file "package")
                                      (:file "core")
-                                     (:file "comprehension")))))
+                                     (:file "sequence")))))

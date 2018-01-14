@@ -1,4 +1,4 @@
-(in-package :com.matthewkrauss.lazy-list-series)
+(in-package :com.matthewkrauss.lazy-list/sequence)
 
 (defun lmapcar (fn &rest lists)
   "Map over a lazy list."

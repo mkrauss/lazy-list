@@ -1,4 +1,4 @@
-(in-package :com.matthewkrauss.lazy-list-test)
+(in-package :com.matthewkrauss.lazy-list/test)
 
 (defun subject () (lcons 1 #'1+))
 

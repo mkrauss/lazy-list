@@ -1,4 +1,4 @@
-(in-package :com.matthewkrauss.lazy-list)
+(in-package :com.matthewkrauss.lazy-list/core)
 
 (defgeneric materialize (finite-lazy-item)
   (:documentation "Return a fully materialized representation of a

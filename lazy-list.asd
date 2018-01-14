@@ -18,7 +18,9 @@
                                      (:file "print-object")
                                      (:file "take")
                                      (:file "take-while")))
-               (:module "comprehension" :serial t
+               (:module "sequence" :serial t
                         :components ((:file "package")
                                      (:file "series")
-                                     (:file "lmapcar")))))
+                                     (:file "lmapcar")
+                                     (:file "lfilter")))
+               (:file "package")))
