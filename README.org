@@ -1,0 +1,93 @@
+Little Lazy Lists Lisp Library
+
+This is a small system to play with lazy evaluating lists in Common
+Lisp. This is meant to give a narrow, well-defined kind of lazy
+evaluation for a kind of list.
+
+* Why you might be interested
+
+I imagine there is something more comprehensive out there, and if you
+really want lazy evaluation and more in a Lisp, you might want to
+check out [[http://shenlanguage.org/][Shen]], which looks pretty interesting. However, if you want a
+small library that lets you create generator-like lazy lists, this
+might be handy. It's also just an interesting project, and you might
+want to read the code, play with it, or contribute for fun and
+learning with me.
+
+* How To
+
+The system is divided in to modules, each with their own package. The
+main package =:com.matthewkrauss.lazy-list=, exports all the exported
+symbols from the other packages, so it can be used to easily access
+the whole library; or if you only need or want one piece, you can just
+use that package.
+
+** Module: core
+
+Package: =:com.matthewkrauss.lazy-list/core=
+
+The package =:lazy-list/core= provides the =lcons= (lazy cons) class,
+which everything else is built on. Convenient factory functions
+=lcons= and =lcons*= initialize =lcons= objects. An =lcons= has a
+value, returned by =lcar=, and a function. Calling =lcdr= applies the
+function passing the value and the function to itself, and returns the
+result. The function should return a new =lcons=, with the next value.
+
+The advanced factory =lcons*= takes an initial value and function and
+uses them directly to initialize an =lcons= object. This can be used
+for creating new basic manipulation functions and advanced lcons
+sequences.
+
+Typically you can just call the factory =lcons=, with an initial value
+and a function to generate successive values. For example, to create a
+lazy list starting from 3 and incrementing indefinitely:
+
+#+BEGIN_SRC lisp
+  (lcons 0 #'1+)
+#+END_SRC
+
+If you caused this to evaluate, it would eventually overflow the
+stack, as it has no end. The function =take=, given a number and an
+lcons, returns an lcons that evaluates to that many items before
+returning nil, and will always terminate.
+
+#+BEGIN_SRC lisp
+  (take 5 (lcons 0 #'1+)) ; #<LCONS (0 1 2 3 4)>
+#+END_SRC
+
+This is not evaluated, although the print-object method for an lcons
+will evaluate it and print what is shown in the comment. To fully
+evaluate an lcons for use, use =materialize=:
+
+#+BEGIN_SRC lisp
+  (materialize (take 5 (lcons 0 #'1+))) ; '(0 1 2 3 4)
+#+END_SRC
+
+Additionally, core provides =take-while=, which returns an unevaluated
+lcons that returns values as long as they meet a predicate.
+
+#+BEGIN_SRC lisp
+  (materialize
+   (take-while (lambda (x) (< x 48))
+               (lcons 6 (lambda (x) (* x 2))))) ; '(6 12 24)
+#+END_SRC
+
+* Why I wrote it
+
+I've been studying Haskell. It's a really neat language, and one of
+the few out there that CL could learn a thing or two from, though I
+ultimately prefer the multi-paradigmatic nature of Lisp for most uses.
+
+One thing that is really interesting in Haskell, though a double-edged
+sword, is the lazy evaluation. I'm not sure I want *everything* to be
+lazy, but being able to have some lazy evaluation in Lisp might be
+useful. If you find this library useful, please let me know!
+
+However, mostly I am just working on this as a fun exercise.
+
+* Contributing
+
+Feel free to file issues, put in pull requests, review the code, etc.
+I'd love to hear any feedback. My professional background is in other
+languages, and this will be the first Common Lisp code I publish, so I
+would love some constructive criticism.
