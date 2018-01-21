@@ -6,4 +6,5 @@
   (:export series
            series-to
            lmapcar
-           lfilter))
+           lfilter
+           lappend))

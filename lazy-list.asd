@@ -21,5 +21,6 @@
                         :components ((:file "package")
                                      (:file "series")
                                      (:file "lmapcar")
-                                     (:file "lfilter")))
+                                     (:file "lfilter")
+                                     (:file "lappend")))
                (:file "package")))
