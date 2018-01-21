@@ -7,4 +7,5 @@
            series-to
            lmapcar
            lfilter
-           lappend))
+           lappend
+           lmappend))

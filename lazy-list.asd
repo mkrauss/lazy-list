@@ -22,5 +22,6 @@
                                      (:file "series")
                                      (:file "lmapcar")
                                      (:file "lfilter")
-                                     (:file "lappend")))
+                                     (:file "lappend")
+                                     (:file "lmappend")))
                (:file "package")))

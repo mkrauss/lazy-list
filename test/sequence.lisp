@@ -34,4 +34,15 @@
         (materialize (lappend nil '(0 1 2))))
     (is equal '(1 3 5 7 9 11)
         (materialize (take 6 (lappend (series 1 2)
-                                      (series 2 2)))))))
+                                      (series 2 2))))))
+
+  (define-test lmappend
+    (is equal '(6 120 504)
+        (materialize (lmappend (lambda (x y z) (list (* x y z)))
+                               (series-to 8 1 3)
+                               (series-to 9 2 3)
+                               (series-to 10 3 3))))
+    (is equal '(2 4 6 8 10)
+        (materialize (take 5 (lmappend (lambda (x y) (list (* x 2) (* y 2)))
+                                       (series 1 2)
+                                       (series 2 2)))))))
