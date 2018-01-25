@@ -45,4 +45,24 @@
     (is equal '(2 4 6 8 10)
         (materialize (take 5 (lmappend (lambda (x y) (list (* x 2) (* y 2)))
                                        (series 1 2)
-                                       (series 2 2)))))))
+                                       (series 2 2))))))
+
+  (define-test lcross
+    (is equal '((1 . 2) (1 . 4) (1 . 6)
+                (3 . 2) (3 . 4) (3 . 6)
+                (5 . 2) (5 . 4) (5 . 6))
+        (materialize (lcross #'cons
+                             (series-to 7 1 2)
+                             (series-to 7 2 2))))
+    (is equal '((1 . 2) (1 . 4) (1 . 6)
+                (3 . 2) (3 . 4) (3 . 6)
+                (5 . 2) (5 . 4) (5 . 6))
+        (materialize (take 9 (lcross #'cons
+                                     (series 1 2)
+                                     (series-to 7 2 2)))))
+    (is equal '((2 . 1) (2 . 3) (2 . 5)
+                (2 . 7) (2 . 9) (2 . 11)
+                (2 . 13) (2 . 15) (2 . 17))
+        (materialize (take 9 (lcross #'cons
+                                     (series-to 7 2 2)
+                                     (series 1 2)))))))

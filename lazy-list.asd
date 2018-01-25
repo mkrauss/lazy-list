@@ -23,5 +23,6 @@
                                      (:file "lmapcar")
                                      (:file "lfilter")
                                      (:file "lappend")
-                                     (:file "lmappend")))
+                                     (:file "lmappend")
+                                     (:file "lcross")))
                (:file "package")))

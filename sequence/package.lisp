@@ -8,4 +8,5 @@
            lmapcar
            lfilter
            lappend
-           lmappend))
+           lmappend
+           lcross))

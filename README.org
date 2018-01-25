@@ -72,6 +72,16 @@ lcons that returns values as long as they meet a predicate.
                (lcons 6 (lambda (x) (* x 2))))) ; '(6 12 24)
 #+END_SRC
 
+* Examples
+
+** Chess board
+
+#+BEGIN_SRC lisp
+  (lcross (lambda (file rank) (cons (string (code-char file)) rank))
+          (series-to (char-code #\i) (char-code #\a) 1)
+          (series-to 9 1 1))
+#+END_SRC
+
 * Why I wrote it
 
 I've been studying Haskell. It's a really neat language, and one of
