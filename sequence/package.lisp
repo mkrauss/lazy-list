@@ -5,6 +5,7 @@
   (:use :common-lisp :lazy-list/core)
   (:export series
            series-to
+           series-through
            lmapcar
            lfilter
            lappend

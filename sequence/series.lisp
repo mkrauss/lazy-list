@@ -7,3 +7,7 @@
 (defun series-to (limit initial increment)
   (take-while (lambda (x) (< x limit))
               (series initial increment)))
+
+(defun series-through (last initial increment)
+  (take-while (lambda (x) (<= x last))
+              (series initial increment)))

@@ -78,8 +78,8 @@ lcons that returns values as long as they meet a predicate.
 
 #+BEGIN_SRC lisp
   (lcross (lambda (file rank) (cons (string (code-char file)) rank))
-          (series-to (char-code #\i) (char-code #\a) 1)
-          (series-to 9 1 1))
+          (series-through (char-code #\h) (char-code #\a) 1)
+          (series-through 8 1 1))
 #+END_SRC
 
 * Why I wrote it
