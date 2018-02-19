@@ -17,7 +17,12 @@
       (materialize (lmapcar #'exp (series-to 4 1 1))))
   (is equal '(7 5 13 8 19)
       (materialize (take 5 (lmapcar (lambda (x) (if (oddp x) x (/ x 2)))
-                                    (series 7 3))))))
+                                    (series 7 3)))))
+  (is equal '(4 8 12)
+      (materialize (lmapcar #'+
+                            (series-through 10 1 1)
+                            (series-through 9 3 3)))))
+
 (define-test lfilter
   :parent sequence :serial nil
   (is equal '(2 4 6 8)
