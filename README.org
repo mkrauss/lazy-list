@@ -72,6 +72,37 @@ lcons that returns values as long as they meet a predicate.
                (lcons 6 (lambda (x) (* x 2))))) ; '(6 12 24)
 #+END_SRC
 
+** Module: sequence
+
+Package: =:com.matthewkrauss.lazy-list/sequence=
+
+This package provides extended functions for generating and
+manipulating lcons based sequences.
+
+The functions =series=, =series-to=, and =series-through= will
+generate an lcons representing a sequence starting from one value and
+incrementing by another. While =series= generates an infinite list,
+=series-to= and =series-through= generate lists ending respectively
+either exclusive or inclusive of their first parameter.
+
+The function =lmapcar= is like =mapcar= for lazy lists - it accepts a
+function and a number of lists.
+
+The function =lfilter= is like =remove-if-not= for lazy lists - it
+accepts a filter predicate and a list.
+
+The function =lappend= appends any number of lazy lists. Of course, if
+any list is infinite, then it will never terminate, so that all
+following lists are never reachable.
+
+The function =lmappend= creates an lcons which lazily maps over some
+number of lists like =lmapcar=, lazily appending the results.
+
+The function =lcross= produces an lcons that lazily returns the
+Cartesian product of some number of lists. Since we are not working
+with n-dimensional arrays here, =lcross= accepts a function to map
+across each combination of values in the product.
+
 * Examples
 
 ** Chess board
