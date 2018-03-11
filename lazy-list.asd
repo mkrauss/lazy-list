@@ -14,4 +14,5 @@
                                      (:file "awake")
                                      (:file "cons")
                                      (:file "car")
-                                     (:file "cdr")))))
+                                     (:file "cdr")
+                                     (:file "materialize")))))

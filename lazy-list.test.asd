@@ -14,4 +14,5 @@
                                      (:file "awake.test")
                                      (:file "cons.test")
                                      (:file "car.test")
-                                     (:file "cdr.test")))))
+                                     (:file "cdr.test")
+                                     (:file "materialize.test")))))

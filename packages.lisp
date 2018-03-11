@@ -12,7 +12,8 @@
            awake
            cons
            car
-           cdr))
+           cdr
+           materialize))
 
 ;;; Meta-package lazy-list
 
