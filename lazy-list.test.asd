@@ -11,4 +11,7 @@
   :components ((:file "packages.test")
                (:module "core" :serial t
                         :components ((:file "sloth.test")
-                                     (:file "awake.test")))))
+                                     (:file "awake.test")
+                                     (:file "cons.test")
+                                     (:file "car.test")
+                                     (:file "cdr.test")))))

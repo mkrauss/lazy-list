@@ -5,8 +5,14 @@
 (defpackage :com.matthewkrauss.lazy-list/core
   (:nicknames :lazy-list/core)
   (:use :common-lisp)
+  (:shadow cons
+           car
+           cdr)
   (:export sloth
-           awake))
+           awake
+           cons
+           car
+           cdr))
 
 ;;; Meta-package lazy-list
 
