@@ -15,4 +15,6 @@
                                      (:file "cons")
                                      (:file "car")
                                      (:file "cdr")
-                                     (:file "materialize")))))
+                                     (:file "materialize")
+                                     (:file "take")
+                                     (:file "take-while")))))

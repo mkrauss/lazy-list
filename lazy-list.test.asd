@@ -15,4 +15,6 @@
                                      (:file "cons.test")
                                      (:file "car.test")
                                      (:file "cdr.test")
-                                     (:file "materialize.test")))))
+                                     (:file "materialize.test")
+                                     (:file "take.test")
+                                     (:file "take-while.test")))))

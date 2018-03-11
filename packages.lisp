@@ -13,7 +13,9 @@
            cons
            car
            cdr
-           materialize))
+           materialize
+           take
+           take-while))
 
 ;;; Meta-package lazy-list
 
