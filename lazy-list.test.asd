@@ -16,5 +16,6 @@
                                      (:file "car.test")
                                      (:file "cdr.test")
                                      (:file "materialize.test")
+                                     (:file "materialize-to-depth.test")
                                      (:file "take.test")
                                      (:file "take-while.test")))))

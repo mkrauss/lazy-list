@@ -16,5 +16,7 @@
                                      (:file "car")
                                      (:file "cdr")
                                      (:file "materialize")
+                                     (:file "materialize-to-depth")
+                                     (:file "print-object")
                                      (:file "take")
                                      (:file "take-while")))))

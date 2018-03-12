@@ -14,6 +14,7 @@
            car
            cdr
            materialize
+           materialize-to-depth
            take
            take-while))
 
