@@ -18,4 +18,5 @@
                                      (:file "materialize.test")
                                      (:file "materialize-to-depth.test")
                                      (:file "take.test")
-                                     (:file "take-while.test")))))
+                                     (:file "take-while.test")))
+               (:file "core.test")))
