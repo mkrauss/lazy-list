@@ -18,13 +18,28 @@
            take
            take-while))
 
+
+;;; Lazy sequence functions
+
+(defpackage :com.matthewkrauss.lazy-list/sequence
+  (:nicknames :lazy-list/sequence)
+  (:use :common-lisp :lazy-list/core)
+  (:shadowing-import-from :lazy-list/core
+                          :cons
+                          :car
+                          :cdr)
+  (:export series
+           series-to
+           series-through))
+
 ;;; Meta-package lazy-list
 
 (defpackage :com.matthewkrauss.lazy-list
   (:nicknames :lazy-list)
   (:use :common-lisp))
 
-(dolist (package '(:lazy-list/core))
+(dolist (package '(:lazy-list/core
+                   :lazy-list/sequence))
   (do-external-symbols (symbol package)
     (shadowing-import symbol :lazy-list)
     (export symbol :lazy-list)))

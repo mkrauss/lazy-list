@@ -19,4 +19,9 @@
                                      (:file "materialize-to-depth.test")
                                      (:file "take.test")
                                      (:file "take-while.test")))
-               (:file "core.test")))
+               (:file "core.test")
+               (:module "sequence" :serial t
+                        :components ((:file "series.test")
+                                     (:file "series-to.test")
+                                     (:file "series-through.test")))
+               (:file "sequence.test")))

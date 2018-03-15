@@ -19,4 +19,8 @@
                                      (:file "materialize-to-depth")
                                      (:file "print-object")
                                      (:file "take")
-                                     (:file "take-while")))))
+                                     (:file "take-while")))
+               (:module "sequence" :serial t
+                        :components ((:file "series")
+                                     (:file "series-to")
+                                     (:file "series-through")))))
