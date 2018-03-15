@@ -24,4 +24,5 @@
                         :components ((:file "series.test")
                                      (:file "series-to.test")
                                      (:file "series-through.test")))
-               (:file "sequence.test")))
+               (:file "sequence.test")
+               (:file "all.test")))
